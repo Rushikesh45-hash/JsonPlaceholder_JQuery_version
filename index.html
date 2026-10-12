@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONPlaceholder Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <h2>Users</h2>
+            <div id="user-list"></div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="profile">
+                <h1 id="selected-username">Select a user</h1>
+                <p id="selected-email"></p>
+                <p id="selected-userid"></p>
+            </header>
+
+            <nav class="tabs">
+                <button id="posts-button" class="tab-button active">
+                    Posts
+                </button>
+
+                <button id="albums-button" class="tab-button">
+                    Albums
+                </button>
+
+                <button id="todos-button" class="tab-button">
+                    Todos
+                </button>
+            </nav>
+
+            <p id="message">Loading users...</p>
+
+            <section id="posts-content" class="tab-content">
+                <h2>Posts</h2>
+                <div id="posts-list"></div>
+            </section>
+
+            <section id="albums-content" class="tab-content hidden">
+                <h2>Albums</h2>
+                <div id="albums-list"></div>
+                <div id="photos-list"></div>
+            </section>
+
+            <section id="todos-content" class="tab-content hidden">
+                <h2>Pending Todos</h2>
+                <div id="todos-list"></div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>

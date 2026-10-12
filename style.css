@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    padding: 20px;
+    background: #202b3c;
+    color: white;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.user-item {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #34445b;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+}
+
+.user-item:hover,
+.user-item.active {
+    background: #0878e8;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 25px;
+}
+
+.profile,
+.post-card,
+.album-card,
+.todo-card {
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 6px #0000000d;
+}
+
+.profile h1 {
+    margin-top: 0;
+}
+
+.profile p {
+    margin: 6px 0;
+    color: #555;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #e0e5eb;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background: #0878e8;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.post-card h3 {
+    text-transform: capitalize;
+}
+
+.post-body {
+    line-height: 1.6;
+}
+
+.comments-section {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.comment {
+    padding: 10px;
+    margin: 10px 0;
+    background: #f4f6f9;
+    border-radius: 5px;
+}
+
+.comment p {
+    margin-bottom: 0;
+}
+
+.album-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.album-number {
+    color: #666;
+    white-space: nowrap;
+}
+
+.album-button,
+.back-button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 5px;
+    background: #0878e8;
+    color: white;
+    cursor: pointer;
+}
+
+.album-button {
+    text-align: left;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.photo-card {
+    overflow: hidden;
+    border-radius: 8px;
+    background: white;
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.photo-card p {
+    padding: 10px;
+    overflow-wrap: anywhere;
+}
+
+.todo-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.todo-checkbox {
+    width: 18px;
+    height: 18px;
+}
+
+#message {
+    color: #555;
+}
+
+@media (max-width: 650px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+}
